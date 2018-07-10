@@ -22,6 +22,24 @@ Enemy.prototype.render = function() {
 };
 
 // Now write your own player class
+var hero = function(){
+  this.sprite='images/char-boy.png';
+
+}
+//hero class
+// constructor
+  // properties
+    //x position
+    //yposition
+    //sprite images
+    //methods
+      //update position
+        //check whether player is off board
+        //check whether colision happened
+        //check whether game is won
+        //use event handler to see if keys have been pressed to move player.
+    //render the new position of the sprite
+    //reset hero back to starting spot if needed.
 // This class requires an update(), render() and
 // a handleInput() method.
 
