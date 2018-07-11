@@ -22,16 +22,27 @@ Enemy.prototype.render = function() {
 };
 
 // Now write your own player class
-var hero = function(){
-  this.sprite='images/char-boy.png';
+class Hero {
+  constructor(){
+    this.x=202;
+    this.y=415;
+    this.sprite='images/char-boy.png';
+  }
+  render(){
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  }
+  update(){
 
+  }
 }
+
+let player = new Hero();
+
+console.log(player);
+
 //hero class
 // constructor
-  // properties
-    //x position
-    //yposition
-    //sprite images
+
     //methods
       //update position
         //check whether player is off board
@@ -46,6 +57,12 @@ var hero = function(){
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+let allEnemies=[];
+for (var i=0; i<2; i++){
+  let enemy= new Enemy();
+  allEnemies.push(enemy);
+}
+console.log(allEnemies);
 // Place the player object in a variable called player
 
 
