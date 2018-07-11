@@ -1,5 +1,7 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(number) {
+  this.x=0;
+  this.y=(number+1)*83;
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -58,8 +60,8 @@ console.log(player);
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 let allEnemies=[];
-for (var i=0; i<2; i++){
-  let enemy= new Enemy();
+for (var i=0; i<3; i++){
+  let enemy= new Enemy(i);
   allEnemies.push(enemy);
 }
 console.log(allEnemies);
