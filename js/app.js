@@ -2,6 +2,7 @@
 var Enemy = function(number) {
   this.x=0;
   this.y=(number+1)*83;
+  this.speed=Math.floor(Math.random()*10+1);
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -13,7 +14,7 @@ var Enemy = function(number) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
+    this.x=this.x+10*dt*this.speed; // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
 };
