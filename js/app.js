@@ -14,6 +14,9 @@ var Enemy = function(number) {
 // Update the enemy's position using dt which standardizes the time across computers.
 Enemy.prototype.update = function(dt) {
     this.x=this.x+12*dt*this.speed; //this updates the x position of the enemy by using the dt and the original speed of the bug.
+    if (this.x>550){
+      this.x=-150;
+    };
 };
 
 // Draw the enemy on the screen, required method for game
