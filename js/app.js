@@ -2,7 +2,7 @@
 var Enemy = function(number) {
   this.x=0;
   this.y=(number+1)*83;
-  this.speed=Math.floor(Math.random()*10+1);
+  this.speed=Math.floor(Math.random()*10+1);// This gives the bugs a varying speed
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
@@ -11,12 +11,9 @@ var Enemy = function(number) {
     this.sprite = 'images/enemy-bug.png';
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+// Update the enemy's position using dt which standardizes the time across computers.
 Enemy.prototype.update = function(dt) {
-    this.x=this.x+10*dt*this.speed; // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
+    this.x=this.x+12*dt*this.speed; //this updates the x position of the enemy by using the dt and the original speed of the bug.
 };
 
 // Draw the enemy on the screen, required method for game
@@ -29,13 +26,38 @@ class Hero {
   constructor(){
     this.x=202;
     this.y=415;
-    this.sprite='images/char-boy.png';
+    this.sprite='images/char-horn-girl.png';
   }
   render(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
   update(){
 
+  }
+
+  handleInput(code){
+    switch(code){
+      case 'left':
+      if(this.x>10){
+      this.x= this.x-20;
+      }
+      break;
+      case 'right':
+      if (this.x<404){
+      this.x= this.x+20;
+      }
+      break;
+      case 'up':
+      if (this.y>10){
+      this.y=this.y-20;
+      }
+      break;
+      case 'down':
+      if (this.y<400){
+      this.y+=20;
+      }
+      break;
+    }
   }
 }
 
