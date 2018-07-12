@@ -1,7 +1,7 @@
 // Enemies our player must avoid
 var Enemy = function(number) {
   this.x=0;
-  this.y=(number+1)*83;
+  this.y=(number+1)*83-20;
   this.speed=Math.floor(Math.random()*10+1);// This gives the bugs a varying speed
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
@@ -15,7 +15,8 @@ var Enemy = function(number) {
 Enemy.prototype.update = function(dt) {
     this.x=this.x+12*dt*this.speed; //this updates the x position of the enemy by using the dt and the original speed of the bug.
     if (this.x>550){
-      this.x=-150;
+      this.x=-150;//this resets the bug to be back on the left side of the screen.
+      this.speed=Math.floor(Math.random()*10+1);
     };
 };
 
@@ -35,29 +36,31 @@ class Hero {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
   update(){
-
+    if (this.y<30){
+      console.log("you win!")
+    }
   }
 
   handleInput(code){
     switch(code){
       case 'left':
-      if(this.x>10){
-      this.x= this.x-20;
+      if(this.x>100){
+      this.x= this.x-101;
       }
       break;
       case 'right':
       if (this.x<404){
-      this.x= this.x+20;
+      this.x= this.x+101;
       }
       break;
       case 'up':
-      if (this.y>10){
-      this.y=this.y-20;
+      if (this.y>30){
+      this.y=this.y-83;
       }
       break;
       case 'down':
       if (this.y<400){
-      this.y+=20;
+      this.y+=83;
       }
       break;
     }
