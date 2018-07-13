@@ -96,6 +96,7 @@ var Engine = (function(global) {
         player.update();
     }
 
+    /*checks whether the player is close to any of the enemy bugs. I used the absolute value function to see if it was within 50 px. If it is then it goes back to start.*/
     function checkCollisions(){
       allEnemies.forEach(function(enemy) {
           if (Math.abs (enemy.x-player.x)<80 && Math.abs(enemy.y-player.y)<50){

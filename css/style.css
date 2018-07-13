@@ -1,7 +1,7 @@
 body {
     text-align: center;
 }
-
+/* used similar code from my previous game for the modal and button*/
 .modal {
   display: none;
   position: fixed;
