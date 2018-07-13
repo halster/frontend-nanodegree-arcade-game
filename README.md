@@ -22,4 +22,4 @@ This game uses Javascript, html and css.
 Hallee Moon
 
 ## Acknowledgements
-Thanks to Matthew Cranford for his tutorial that helped me get started.  
+Thanks to Matthew Cranford https://matthewcranford.com/arcade-game-walkthrough-part-1-starter-code-breakdown/ for his tutorial that helped me get started.  
