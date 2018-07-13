@@ -1,6 +1,25 @@
-frontend-nanodegree-arcade-game
+# Frontend-nanodegree-arcade-game
+A simple game where players try to get the character to the water without hitting the enemy bugs
+
 ===============================
+## Table of Contents
+* [Set up](#setup)
+* [Instructions](#instructions)
+* [Built with](#builtWith)
+* [Author](#author)  
+* [Acknowledgements](#Acknowledgements)
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+## Set up
+Download the repo from https://github.com/halster/frontend-nanodegree-arcade-game.git and open the index.html file in your browser.  
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## Instructions
+Use the arrow keys to navigate the player to the water.  If you hit a bug it sends you back to the starting place.  When you reach the water a modal will pop up letting you know you won.  
+
+## Built with
+This game uses Javascript, html and css.
+
+## Author
+Hallee Moon
+
+## Acknowledgements
+Thanks to Matthew Cranford for his tutorial that helped me get started.  
