@@ -32,12 +32,16 @@ class Hero {
     this.y=415;
     this.sprite='images/char-horn-girl.png';
   }
+
   render(){
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
+
   update(){
     if (this.y<30){
-      console.log("you win!")
+      this.x=202;
+      this.y=415;
+      youWin();
     }
   }
 
@@ -96,8 +100,12 @@ for (var i=0; i<3; i++){
 console.log(allEnemies);
 // Place the player object in a variable called player
 
+function youWin(){
+  var modal =document.getElementById('myModal');
+  modal.style.display="block";
+}
 
-
+//document.querySelector("#button").addEventListener("click", init)
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener('keyup', function(e) {
