@@ -13,9 +13,9 @@ var Enemy = function(number) {
 
 // Update the enemy's position using dt which standardizes the time across computers.
 Enemy.prototype.update = function(dt) {
-    this.x=this.x+12*dt*this.speed; //this updates the x position of the enemy by using the dt and the original speed of the bug.
+    this.x=this.x+15*dt*this.speed; //this updates the x position of the enemy by using the dt and the original speed of the bug.
     if (this.x>550){
-      this.x=-150;//this resets the bug to be back on the left side of the screen.
+      this.x=-100;//this resets the bug to be back on the left side of the screen.
       this.speed=Math.floor(Math.random()*10+1);
     };
 };
@@ -103,6 +103,9 @@ console.log(allEnemies);
 function youWin(){
   var modal =document.getElementById('myModal');
   modal.style.display="block";
+  document.querySelector("#button").addEventListener("click", function(){
+    modal.style.display="none";
+  });
 }
 
 //document.querySelector("#button").addEventListener("click", init)
